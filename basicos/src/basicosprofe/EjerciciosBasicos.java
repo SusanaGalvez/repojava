@@ -268,7 +268,7 @@ SI EQUIVALE A UN APROBADO, BIEN, NOTABLE, O SOBRESALIENTE clasificarNota*/
 	    	    
 	    	    int imc= kg / (estatura * estatura);
 	    	    
-	    	    IMC = switch(imc){
+	    	    //IMC = switch(imc){
 	    	    
 //	    	    case 5, 4, 6->"su imc es DESNUTRIDO";
 //		    	case imc >=16 && <18 -> "su imc es DELGADO";
