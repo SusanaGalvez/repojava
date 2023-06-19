@@ -252,42 +252,43 @@ SI EQUIVALE A UN APROBADO, BIEN, NOTABLE, O SOBRESALIENTE clasificarNota*/
 	      */
 	    
 	    
-	    public static String calculaIndice(int estatura, int kg) {
-	    		String IMC ="";
+	    public static String calculaIndice() {
+	    		String  IMC ="";
 	    		
-	    	    Scanner input = new Scanner(System.in);
-	    	    double peso;
-	    	    double altura;
+	    	    Scanner calcularIMC = new Scanner(System.in);
+	    	    float peso;
+	    	    float altura;
 
-	    	    System.out.print("Ingrese su altura en metros:");
-	    	    peso = input.nextDouble();
+	    	    System.out.print("Ingrese su peso en kilogramos");
+	    	    peso = calcularIMC.nextFloat();
 
-	    	    System.out.print("Ingrese su peso en kilogramos ");
+	    	    System.out.print("Ingrese su altura en metros ");
 	    	    
-	    	    altura = input.nextDouble();
+	    	    altura = calcularIMC.nextFloat();
 	    	    
-	    	    int imc= kg / (estatura * estatura);
+	    	    float estaturaFinal = altura * altura;
 	    	    
-	    	    //IMC = switch(imc){
+	    	    float imc = peso / estaturaFinal;
 	    	    
-//	    	    case 5, 4, 6->"su imc es DESNUTRIDO";
-//		    	case imc >=16 && <18 -> "su imc es DELGADO";
-//		    	case imc >=18 && < 25 ->"su imc es IDEAL";
-//		    	case imc >=25 && < 31 ->"su imc es SOBREPESO";
-//		    	case imc >=31->"su imc es OBESO";
-//		    	default ->"Error";
-//	    
+	    	   System.out.println(imc);
 	    	
-
-	    	   
-	    	    System.out.printf("Su índice de masa corporal es:\n", imc);
-	    	    
-	    	    return IMC;
-	    	  }
-	    	
+	              if(imc<16){
+	            	   System.out.print("su imc es DESNUTRIDO"); 
+	              }else if(imc <=16 && imc<18) {
+	           	   System.out.print("su imc es DELGADO"); 
+	               }else if(imc >=18 && imc < 25){
+	            	   System.out.print("su imc es IDEAL");   
+	               }else if(imc >=25 && imc < 31){
+	            	   System.out.print("su imc es SOBREPESO");
+	               }else if(imc >31){
+	           	   System.out.print("su imc es OBESO");
+	            	  
+		    	  }
+	               return IMC;
+	    }
 		    public static void main(String[] args) {
-		    	String IMC = calculaIndice(170,69);
-		    	System.out.println(IMC);
+		    	calculaIndice();
+		    ;
 		    	
 	    	
 	    
